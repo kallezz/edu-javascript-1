@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 5</title>
+</head>
+<body>
+<div>
+    <p>Year is a leap year: <span id="result"></span></p>
+</div>
+<script>
+    const year = prompt("Give a year")
+
+    function isLeapYear(year) {
+        return (year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0);
+    }
+
+    if(isLeapYear(year)) {
+        document.getElementById("result").textContent = "yes"
+    } else {
+        document.getElementById("result").textContent = "no"
+    }
+</script>
+</body>
+</html>

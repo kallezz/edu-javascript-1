@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+    <p id="content"></p>
+</div>
+<script>
+    let num
+
+    if(confirm("Should I calculate the square root?")) {
+        num = prompt("Enter a number")
+        document.getElementById("content").textContent = "Squareroot is " + Math.sqrt(num)
+    } else {
+        document.getElementById("content").textContent = "The square root is not calculated."
+    }
+</script>
+</body>
+</html>
