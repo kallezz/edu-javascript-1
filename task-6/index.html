@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Task 6</title>
 </head>
 <body>
 <div>
@@ -10,10 +10,16 @@
 </div>
 <script>
     let num
+    const confirmation = confirm("Should I calculate the square root?")
 
-    if(confirm("Should I calculate the square root?")) {
+    if(confirmation) {
         num = prompt("Enter a number")
-        document.getElementById("content").textContent = "Squareroot is " + Math.sqrt(num)
+
+        if (num >= 0) {
+            document.getElementById("content").textContent = "Squareroot is " + Math.sqrt(num)
+        } else {
+            document.getElementById("content").textContent = "The square root of a negative number is not defined"
+        }
     } else {
         document.getElementById("content").textContent = "The square root is not calculated."
     }

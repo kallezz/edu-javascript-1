@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 7</title>
+</head>
+<body>
+<div>
+    <p>Rolls:</p>
+    <ul id="roll-results"></ul>
+    <p>Total:</p>
+    <p id="total"></p>
+</div>
+<script>
+    const amount = prompt("How many dice to roll?");
+    let results = [];
+    let sum;
+
+    for (let i = 0; i < amount; i++) {
+        results.push(Math.floor(Math.random() * 6 + 1));
+    }
+
+    sum = results.reduce((total, num) => total + num, 0);
+
+    document.getElementById("roll-results").innerHTML = results.map(result => `<li>${result}</li>`).join('');
+    document.getElementById("total").innerHTML = sum;
+
+    console.log("Rolls:", results);
+    console.log("Total:", sum);
+</script>
+</body>
+</html>
