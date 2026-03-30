@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 10</title>
+</head>
+<body>
+<p id="result"></p>
+
+<script>
+    const diceCount = Number(prompt("How many dice?"));
+    const targetSum = Number(prompt("What sum are you interested in?"));
+
+    // Check if target is possible
+    if (targetSum < diceCount || targetSum > diceCount * 6) {
+        document.getElementById("result").textContent =
+            `Impossible! With ${diceCount} dice, sum must be between ${diceCount} and ${diceCount * 6}.`;
+    } else {
+        const simulations = 10000;
+        let successCount = 0;
+
+        for (let i = 0; i < simulations; i++) {
+            let sum = 0;
+
+            for (let j = 0; j < diceCount; j++) {
+                sum += Math.floor(Math.random() * 6) + 1;
+            }
+
+            if (sum === targetSum) {
+                successCount++;
+            }
+        }
+
+        const probability = (successCount / simulations) * 100;
+
+        document.getElementById("result").textContent =
+            `Probability of getting sum ${targetSum} with ${diceCount} dice: ${probability.toFixed(2)}%`;
+    }
+</script>
+</body>
+</html>

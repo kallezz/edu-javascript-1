@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 9</title>
+</head>
+<body>
+<div>
+    <p id="result"></p>
+</div>
+<script>
+    const userInput = prompt('Enter a number:');
+    const number = parseInt(userInput, 10);
+
+    const isPrime =
+        number > 1 &&
+        !Array.from({length: Math.floor(Math.sqrt(number)) - 1}, (_, i) => i + 2)
+            .some(n => number % n === 0);
+
+    document.getElementById('result').textContent =
+        isPrime ? `${number} is a prime number` : `${number} is not a prime number`;
+</script>
+</body>
+</html>

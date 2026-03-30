@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 8</title>
+</head>
+<body>
+<div>
+  <p>All years in given range:</p>
+  <ul id="year-list"></ul>
+</div>
+<script>
+  const startYear = +prompt("Enter start year");
+  const endYear = +prompt("Enter end year");
+
+  const calculateYears = () => {
+    let result = [];
+
+    for (let i = startYear; i <= endYear; i++) {
+      result.push(`<li>${i}</li>`);
+    }
+
+    return result.join("")
+  }
+
+  document.getElementById("year-list").innerHTML = calculateYears()
+</script>
+</body>
+</html>
