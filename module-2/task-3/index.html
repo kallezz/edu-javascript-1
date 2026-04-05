@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 3</title>
+</head>
+<body>
+<ul id="dogList"></ul>
+<script>
+  const dogNames = [];
+
+  for (let i = 0; i < 6; i++) {
+    const name = prompt(`Enter dog name ${i + 1}:`);
+    dogNames.push(name);
+  }
+
+  dogNames.sort().reverse();
+
+  document.getElementById("dogList").innerHTML = dogNames.map(name => `<li>${name}</li>`).join('');
+</script>
+</body>
+</html>

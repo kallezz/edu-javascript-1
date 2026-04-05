@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 4</title>
+</head>
+<body>
+<p>Results in console.</p>
+<script>
+  const numbers = [];
+  let input;
+
+  do {
+    input = parseFloat(prompt("Enter a number (0 to stop):"));
+
+    if (input !== 0) {
+      numbers.push(input);
+    }
+  } while (input !== 0);
+
+  numbers.sort((a, b) => b - a);
+
+  console.log("Numbers from largest to smallest:");
+  numbers.forEach(num => console.log(num));
+</script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 2</title>
+</head>
+<body>
+<ol id="namelist"></ol>
+<script>
+  const numParticipants = parseInt(prompt("How many participants are there?"));
+  const names = [];
+
+  for (let i = 0; i < numParticipants; i++) {
+    const name = prompt(`Enter the name of participant ${i + 1}:`);
+    names.push(name);
+  }
+
+  names.sort();
+
+  document.getElementById("namelist").innerHTML = names.map(name => `<li>${name}</li>`).join('');
+</script>
+</body>
+</html>

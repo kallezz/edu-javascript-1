@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 7</title>
+</head>
+<body>
+<ul id="rollList"></ul>
+<script>
+  function rollDice(sides) {
+    return Math.floor(Math.random() * sides) + 1;
+  }
+
+  const sides = parseInt(prompt("How many sides?"));
+  const rolls = [];
+  let result;
+
+  do {
+    result = rollDice(sides);
+    rolls.push(result);
+  } while (result !== sides);
+
+  document.getElementById("rollList").innerHTML = rolls.map(roll => `<li>${roll}</li>`).join('');
+</script>
+</body>
+</html>

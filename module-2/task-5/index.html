@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 5</title>
+</head>
+<body>
+<p>Results in console.</p>
+<script>
+  const numbers = [];
+  let isDuplicate = false;
+  let input;
+
+  while (true) {
+    input = prompt("Enter a number:");
+
+    if (input === null) {
+      break;
+    }
+
+    input = parseFloat(input);
+
+    if (isNaN(input)) {
+      continue;
+    }
+
+    if (numbers.includes(input)) {
+      alert(`The number ${input} has already been given!`);
+      isDuplicate = true;
+      break;
+    }
+
+    numbers.push(input);
+  }
+
+  numbers.sort((a, b) => a - b);
+
+  console.log("Numbers in ascending order:");
+  numbers.forEach(num => console.log(num));
+</script>
+</body>
+</html>

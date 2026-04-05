@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 9</title>
+</head>
+<body>
+<p>Results in console.</p>
+<script>
+  function even(arr) {
+    const result = [];
+
+    for (let i = 0; i < arr.length; i++) {
+      if (arr[i] % 2 === 0) {
+        result.push(arr[i]);
+      }
+    }
+
+    return result;
+  }
+
+  const originalArray = [2, 7, 4, 9, 6, 3, 8];
+  const evenArray = even(originalArray);
+
+  console.log("Original array:", originalArray);
+  console.log("Even array:", evenArray);
+</script>
+</body>
+</html>

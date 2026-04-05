@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 8</title>
+</head>
+<body>
+<p id="result"></p>
+
+<script>
+  function concat(arr) {
+    let result = "";
+
+    for (let i = 0; i < arr.length; i++) {
+      result += arr[i];
+    }
+
+    return result;
+  }
+
+  const names = ["Johnny", "DeeDee", "Joey", "Marky"];
+  const concatenated = concat(names);
+
+  document.getElementById("result").textContent = concatenated;
+</script>
+</body>
+</html>

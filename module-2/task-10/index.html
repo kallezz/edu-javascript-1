@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 10</title>
+</head>
+<body>
+<p>Results in console.</p>
+<script>
+  const numCandidates = parseInt(prompt("How many candidates?"));
+  const candidates = [];
+
+  for (let i = 0; i < numCandidates; i++) {
+    const name = prompt(`Enter the name of candidate ${i + 1}:`);
+
+    candidates.push({
+      name: name,
+      votes: 0
+    });
+  }
+
+  const numVoters = parseInt(prompt("How many voters?"));
+
+  for (let i = 0; i < numVoters; i++) {
+    const vote = prompt(`Voter ${i + 1}: Enter candidate name (empty for no vote):`);
+
+    if (vote === "" || vote === null) {
+      continue;
+    }
+
+    const candidate = candidates.find(c => c.name.toLowerCase() === vote.toLowerCase());
+
+    if (candidate) {
+      candidate.votes++;
+    }
+  }
+
+  candidates.sort((a, b) => b.votes - a.votes);
+
+  const winner = candidates[0];
+
+  console.log(`The winner is ${winner.name} with ${winner.votes} votes.`);
+  console.log("results:");
+  candidates.forEach(candidate => {
+    console.log(`${candidate.name}: ${candidate.votes} votes`);
+  });
+</script>
+</body>
+</html>
