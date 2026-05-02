@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digitransit Route Planner</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+</head>
+<body>
+<div class="container">
+    <h1>Route Planner to Karaportti 2</h1>
+
+    <div class="content">
+        <div class="form-section">
+            <form id="routeForm">
+                <div class="form-group">
+                    <label for="addressInput">Enter starting address:</label>
+                    <input
+                            type="text"
+                            id="addressInput"
+                            placeholder="e.g., Kamppi, Helsinki"
+                            required
+                    >
+                    <div id="suggestions" class="suggestions"></div>
+                </div>
+                <button type="submit">Find Route</button>
+            </form>
+
+            <div id="routeInfo" class="route-info hidden">
+                <h2>Trip Details</h2>
+                <p><strong>Start time:</strong> <span id="startTime"></span></p>
+                <p><strong>End time:</strong> <span id="endTime"></span></p>
+                <p><strong>Duration:</strong> <span id="duration"></span></p>
+                <p><strong>Distance:</strong> <span id="distance"></span></p>
+            </div>
+
+            <div id="error" class="error hidden"></div>
+            <div id="loading" class="loading hidden">Loading route...</div>
+        </div>
+
+        <div id="map" class="map"></div>
+    </div>
+</div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="main.js"></script>
+</body>
+</html>

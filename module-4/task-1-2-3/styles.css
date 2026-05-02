@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    background-color: #f8f9fa;
+    padding: 40px 20px;
+    line-height: 1.6;
+    color: #333;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto 60px;
+    display: flex;
+    gap: 12px;
+}
+
+input[type="text"] {
+    flex: 1;
+    padding: 12px 16px;
+    border: 1px solid #ddd;
+    background: white;
+    font-size: 16px;
+    font-family: inherit;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    border-color: #0066cc;
+    box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.1);
+}
+
+input[type="submit"] {
+    padding: 12px 32px;
+    background-color: #0066cc;
+    color: white;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.2s;
+}
+
+input[type="submit"]:hover {
+    background-color: #0052a3;
+}
+
+input[type="submit"]:active {
+    background-color: #003d7a;
+}
+
+#results {
+    max-width: 900px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 24px;
+}
+
+article {
+    background: white;
+    border: 1px solid #e0e0e0;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+article h2 {
+    padding: 20px 20px 12px;
+    font-size: 20px;
+    font-weight: 600;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+article a {
+    padding: 12px 20px;
+    color: #0066cc;
+    text-decoration: none;
+    font-size: 14px;
+    word-break: break-all;
+    border-bottom: 1px solid #f0f0f0;
+    transition: color 0.2s;
+}
+
+article a:hover {
+    color: #0052a3;
+}
+
+article img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+article div {
+    padding: 20px;
+    flex: 1;
+    font-size: 14px;
+    color: #666;
+    overflow: hidden;
+}
+
+article div p {
+    margin-bottom: 12px;
+}
+
+article div p:last-child {
+    margin-bottom: 0;
+}
